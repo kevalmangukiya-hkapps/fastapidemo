@@ -1,9 +1,15 @@
 {
   "version": 2,
   "builds": [
-    { "src": "server.py", "use": "@vercel/python" }
+    {
+      "src": "app/main.py",
+      "use": "@vercel/python"
+    }
   ],
   "routes": [
-    { "src": "/(.*)", "dest": "server.py" }
+    {
+      "src": "/(.*)",
+      "dest": "app/main:app"
+    }
   ]
 }
