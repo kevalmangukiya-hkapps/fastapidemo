@@ -14,7 +14,6 @@ templates = Jinja2Templates(directory="templates")
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
 client = AsyncIOMotorClient(os.getenv("MONGODB_URL"))
-    # client = MongoClient("mongodb+srv://keval12345:keval12345@notesapp.ngmxhfw.mongodb.net/")
 db = client.get_database("test_db")
 users_collection = db.get_collection("users")
 
